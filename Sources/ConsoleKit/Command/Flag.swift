@@ -19,7 +19,7 @@ public final class Flag: AnyFlag {
         return value
     }
 
-    var value: Bool?
+    public var value: Bool?
 
     /// Creates a new `Option` with the `optionType` set to `.value`.
     ///

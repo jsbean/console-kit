@@ -19,15 +19,15 @@ extension Console {
         let signature = try GlobalSignature(from: &context.input)
 
         // check -n and -y flags.
-        if signature.no {
+        if signature.no == true {
             self.confirmOverride = false
-        } else if signature.yes {
+        } else if signature.yes == true {
             self.confirmOverride = true
         }
 
-        if signature.help {
+        if signature.help == true {
             try command.outputHelp(using: &context)
-        } else if signature.autocomplete {
+        } else if signature.autocomplete == true {
             try command.outputAutoComplete(using: &context)
         } else {
             return try command.run(using: &context)

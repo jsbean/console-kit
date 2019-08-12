@@ -38,7 +38,7 @@ public final class Argument<Value>: AnyArgument
         return value
     }
 
-    var value: Value?
+    public var value: Value?
     var label: String?
 
     public convenience init() {
